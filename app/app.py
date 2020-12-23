@@ -10,8 +10,8 @@ def cities_import() -> List[Dict]:
     config = {
         'user': 'root',
         'password': 'root',
-        'host': 'db',
-        'port': '3306',
+        'host': '0.0.0.0',
+        'port': '32000',
         'database': 'citiesData'
     }
     connection = mysql.connector.connect(**config)
@@ -34,4 +34,7 @@ def index() -> str:
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='127.0.0.1')
+    print("f")
+    print(cities_import())
+    print("g")
